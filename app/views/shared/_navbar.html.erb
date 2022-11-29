@@ -6,6 +6,16 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
+
+    <form id="form">
+      <input type="search" id="query" name="q" placeholder="  Search ..">
+      <button><i class="fa-solid fa-magnifying-glass"></i></button>
+    </form>
+
+    <p>Explore</p>
+    <p>Buy / Sell</p>
+    <p>My collection</p>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
