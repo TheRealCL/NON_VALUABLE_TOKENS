@@ -4,10 +4,10 @@ class CreateNvts < ActiveRecord::Migration[7.0]
       t.string :title
       t.string :content
       t.string :picture
+      t.string :category
       t.date :date
       t.integer :price
-      t.references :users
-      t.integer :user_id
+      t.references :users, foreign_key: true
 
       t.timestamps
     end
