@@ -1,4 +1,4 @@
 class Nvt < ApplicationRecord
-  has_many :transactions, through: :users
-  has_one :user
+  has_many :transactions, dependent: :destroy
+  belongs_to :user
 end
