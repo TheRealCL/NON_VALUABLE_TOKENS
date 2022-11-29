@@ -5,4 +5,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "articles#index"
+  resources :users
+
+
+  resources :nvts, excepted: %i[destroy edit] do
+    resources :transactions
+  end
+
+  get '/profile', to: 'pages#profile', as: 'profile'
+
 end
