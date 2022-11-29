@@ -1,0 +1,2 @@
+class Nvt < ApplicationRecord
+end
