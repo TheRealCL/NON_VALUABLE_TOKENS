@@ -9,8 +9,10 @@ Rails.application.routes.draw do
 
 
   resources :nvts, excepted: %i[destroy edit] do
-    resources :transactions
+    resources :transactions, only: %i[new create]
   end
+
+  resources :transactions, excepted: %i[index new create]
 
   get '/profile', to: 'pages#profile', as: 'profile'
 

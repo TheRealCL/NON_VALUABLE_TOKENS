@@ -3,7 +3,7 @@ class PagesController < ApplicationController
   end
 
   def profile
-    @transactions = user.transactions
-    @nvts = user.nvts
+    # @transactions = @user.transactions
+    # @nvts = @user.nvts
   end
 end
