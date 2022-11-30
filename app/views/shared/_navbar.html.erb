@@ -1,25 +1,32 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-    <% end %>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <div class="navbar-logo">
+      <%= link_to "#", class: "navbar-brand" do %>
+        <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+      <% end %>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    </div>
 
     <form id="form">
-      <input type="search" id="query" name="q" placeholder="  Search ..">
+      <input type="search" id="query" name="q" placeholder="Search">
       <button><i class="fa-solid fa-magnifying-glass"></i></button>
     </form>
 
-    <p>Explore</p>
-    <p>Buy / Sell</p>
-    <p>My collection</p>
+    <div id="navbar-index">
+      <ul class="nav navbar-nav">
+        <li>Explore</li>
+        <li>Buy & Sell</li>
+        <li>My collection</li>
+      </ul>
+    </div>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
+          <%# <i class="fa-light fa-circle-user"></i> --->  Would be nice to change "login" to this icon! %>
             <%= link_to "Home", "#", class: "nav-link" %>
           </li>
           <li class="nav-item">
