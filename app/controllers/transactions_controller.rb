@@ -27,7 +27,7 @@ class TransactionsController < ApplicationController
 
   def update
     if @transaction.update(transaction_params)
-      redirect_to profile_path, notice: 'Transaction was successfully updated.'
+      redirect_to profile_path, notice: 'Transaction was approved.'
     else
       render profile_path
     end
@@ -35,7 +35,7 @@ class TransactionsController < ApplicationController
 
   def destroy
     @transaction.destroy
-    redirect_to profile_path, notice: 'Transaction was successfully deleted.'
+    redirect_to profile_path, notice: 'Transaction was rejected.'
   end
 
   private
