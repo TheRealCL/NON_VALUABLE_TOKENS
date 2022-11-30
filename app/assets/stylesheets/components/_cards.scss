@@ -1,5 +1,124 @@
+
+// --- show page --- //
+
+.card-product {
+  overflow: hidden;
+  height: 360px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10%;
+  color: #8DB1CD;
+}
+
+.card-product:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.card-product img {
+  height: 100%;
+  width: 360px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-product h3 {
+  font-size: 36px;
+  font-style: sans-serif inherit;
+}
+
+.card-product h2 {
+  font-size: 48px;
+  font-style: sans-serif inherit;
+  margin: 0;
+}
+
+.card-product p {
+  font-size: 24px;
+  font-style: sans-serif inherit;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-product .card-product-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-product-actions {
+  background-color: black;
+}
+
+
+
+// --- index page --- //
+
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
+}
+
+.card-category {
+  overflow: hidden;
+  height: 120px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10%;
+  color: #8DB1CD;
+}
+
+.card-category:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transition: 0.3s;
+}
+
+.card-category img {
+  height: 100%;
+  width: 120px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.card-category h3 {
+  font-size: 12px;
+  font-style: sans-serif inherit;
+}
+
+.card-category h2 {
+  font-size: 16px;
+  font-style: sans-serif inherit;
+  margin: 0;
+}
+
+.card-category p {
+  font-size: 8px;
+  font-style: sans-serif inherit;
+  line-height: 1.4;
+  opacity: .7;
+  margin-bottom: 0;
+  margin-top: 8px;
+}
+
+.card-category .card-product-infos {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+.card-categroy-actions {
+  background-color: black;
 }
