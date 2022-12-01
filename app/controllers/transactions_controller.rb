@@ -1,37 +1,45 @@
 class TransactionsController < ApplicationController
-  before_action :set_transaction, only: %i[show update destroy]
+  before_action :set_transaction, only: %i[show edit update destroy]
+  before_action :set_nvt, only: :new
+
+  def index
+    @transactions = Transaction.where(user_id: current_user.id)
+  end
 
   def show
+
   end
 
   def new
-    @nvt = Nvt.find(set_nvt)
-    @nvt_user = @nvt.user
+    @nvt_owner = @nvt.user
     @transaction = Transaction.new
   end
 
   def create
     @transaction = Transaction.new(transaction_params)
-    @transaction.nvt = Nvt.find(set_nvt)
+    @transaction.nvt = Nvt.find(params[:nvt_id])
     @transaction.user = current_user
     if @transaction.save
-      redirect_to profile_path, notice: 'Request done'
+      redirect_to transaction_path(@transaction), notice: 'Request done'
     else
       render :new, status: :unprocessable_entity
     end
   end
 
+  def edit
+  end
+
   def update
     if @transaction.update(transaction_params)
-      redirect_to profile_path, notice: 'Transaction was approved.'
+      redirect_to transaction_path(@transaction), notice: 'Transaction was updated.'
     else
-      render profile_path
+      render :edit
     end
   end
 
   def destroy
     @transaction.destroy
-    redirect_to profile_path, notice: 'Transaction was rejected.'
+    redirect_to transactions_path, notice: 'Transaction was rejected.'
   end
 
   private
