@@ -6,11 +6,12 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "articles#index"
   resources :users
-  get 'profile', to: 'profiles#show', as: 'profile'
+  get '/profile', to: 'profiles#show', as: 'profile'
+  patch '/transactions/:id/status', to: 'transactions#confirm_status', as: 'confirm_status'
 
   resources :nvts, excepted: %i[destroy edit] do
     resources :transactions, only: %i[new create]
   end
 
-  resources :transactions, excepted: %i[index new create]
+  resources :transactions, excepted: %i[index new create delete]
 end

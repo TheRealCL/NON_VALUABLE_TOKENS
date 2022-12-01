@@ -37,6 +37,12 @@ class TransactionsController < ApplicationController
     end
   end
 
+  def confirm_status
+    set_transaction
+    @transaction.update(status_params)
+    redirect_to transaction_path(@transaction)
+  end
+
   def destroy
     @transaction.destroy
     redirect_to transactions_path, notice: 'Transaction was rejected.'
@@ -54,5 +60,9 @@ class TransactionsController < ApplicationController
 
   def transaction_params
     params.require(:transaction).permit(:status, :comment)
+  end
+
+  def status_params
+    params.require(:transaction).permit(:status)
   end
 end
