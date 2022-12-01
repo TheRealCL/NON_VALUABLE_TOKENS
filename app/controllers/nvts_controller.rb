@@ -33,7 +33,7 @@ class NvtsController < ApplicationController
   end
 
   def nvt_params
-    params_require(:nvt).permit(:title, :content, :picture, :category, :date, :price)
+    params_require(:nvt).permit(:title, :content, :category, :date, :price, photo: [])
   end
 
 end

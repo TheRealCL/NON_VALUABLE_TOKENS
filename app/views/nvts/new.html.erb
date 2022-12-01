@@ -1,0 +1,9 @@
+<%= simple_form_for @nvt do |f| %>
+  <%= f.input :title, placeholder: 'nom de votre NVT' %>
+  <%= f.input :content, placeholder: 'entrez une description' %>
+  <%= f.input :date, placeholder: 'date de création' %>
+  <%= f.input :category, placeholder: 'entrez la catégorie' %>
+  <%= f.input :price, placeholder: 'entrez votre prix' %>
+  <%= f.input :photo, as: :file %>
+  <%= f.submit class: 'btn btn-flat' %>
+<% end %>
