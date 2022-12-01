@@ -1,14 +1,18 @@
-<div class="container">
+<h1>Edit your NVT's transactions</h1>
+<div class="card-form" style="width:900px">
   <div class="row">
     <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h1>Edit your transaction for NVT:</h1>
-        <h2><%= @transaction.nvt.title %></h2>
-        <%= simple_form_for @transaction do |f| %>
-          <%= f.input :comment, as: :string, required: false %>
-          <%= f.submit "Update!", class: "btn btn-primary" %>
+        <%= simple_form_for (@transaction), html: { class: "container mt-5"} do |f| %>
+        <div class="body">
+          <h2>NVT name: <%= @transaction.nvt.title %></h2>
+          <div>
+            <%= f.input :comment, as: :string, required: false %>
+            <%= f.submit "Update!", class: "button" %>
+          </div>
+        </div>
         <% end %>
       </div>
     </div>
   </div>
+</div>
 </div>
