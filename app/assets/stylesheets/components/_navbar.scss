@@ -1,6 +1,11 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #111927;
+  color: #8DB1CD;
+  font-family: sans-serif inherit;
+  position: fixed;
+  width: 100%;
+  margin-top: 0%;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,5 +13,75 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 125px;
+  height: 75px;
+  margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar-lewagon .navbar-brand img:hover {
+  transform: scale(0.9, 0.9);
+}
+
+.nav-link {
+  color: #8DB1CD;
+}
+
+#navbar-index {
+  li {
+    margin-right: 40px;
+    margin-left: 40px;
+    font-size: 20px;
+  }
+}
+
+.navbar {
+  border-bottom: solid #1A2332;
+  z-index: 5;
+  box-shadow: 0 4px 2px  rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.navbar:hover {
+  box-shadow: 0 4px 2px  rgba(0,0,0,0.6);
+}
+
+.navbar li {
+  transition: 0.3s;
+}
+
+.navbar li:hover {
+  transform: scale(0.9, 0.9);
+}
+
+form {
+  width: 500px;
+  height: 40px;
+  display:flex;
+  flex-direction:row;
+  padding:2px;
+  margin-left: 10px;
+}
+
+input {
+  background-color: #1A2332;
+  border: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  flex-grow:2;
+  color: #8DB1CD;
+  padding-left: 20px;
+}
+
+button {
+  background-color: #1A2332;
+  border: none;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+  color: #8DB1CD;
+  padding-right: 20px;
 }

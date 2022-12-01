@@ -1,0 +1,8 @@
+<h1> NVT'S Collection </h1>
+<% @nvts.each do |nvt| %>
+<%=nvt.title %>
+<%=nvt.content %>
+<%=nvt.category %>
+<%= image_tag nvt.picture %>
+<%=nvt.price %>
+<%  end  %>
