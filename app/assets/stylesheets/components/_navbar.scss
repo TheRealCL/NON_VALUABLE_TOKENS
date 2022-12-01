@@ -16,6 +16,11 @@
   width: 125px;
   height: 75px;
   margin-left: 20px;
+  transition: 0.3s;
+}
+
+.navbar-lewagon .navbar-brand img:hover {
+  transform: scale(0.9, 0.9);
 }
 
 .nav-link {
@@ -32,6 +37,21 @@
 
 .navbar {
   border-bottom: solid #1A2332;
+  z-index: 5;
+  box-shadow: 0 4px 2px  rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
+
+.navbar:hover {
+  box-shadow: 0 4px 2px  rgba(0,0,0,0.6);
+}
+
+.navbar li {
+  transition: 0.3s;
+}
+
+.navbar li:hover {
+  transform: scale(0.9, 0.9);
 }
 
 form {
