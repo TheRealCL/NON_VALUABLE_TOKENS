@@ -1,16 +1,24 @@
-<h1> NVT'S Collection </h1>
-
-<div class="cards">
-  <% @nvts.each do |nvt| %>
-  <%= link_to nvt_path(nvt) do %>
-    <div class="card-item">
-      <%= image_tag nvt.picture %>
-        <div class="card-item-infos">
-          <h3><%= nvt.category %></h3>
-          <h2><%= nvt.title %></h2>
-          <p><%= nvt.price %> <strong>$NVC</strong></p>
+<div class="container">
+  <div class="container-text-intro">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+          <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
+      </svg>
+    <span filter-content="S"> Navigate throught the marketplace </span>
+  </div>
+  <div class="cards">
+    <% @nvts.each do |nvt| %>
+    <%= link_to nvt_path(nvt) do %>
+      <div class="card-item">
+        <%= image_tag nvt.picture %>
+          <div class="card-item-infos">
+            <h3><%= nvt.category %></h3>
+            <h2><%= nvt.title %></h2>
+            <p><%= nvt.price %> <strong>$NVC</strong></p>
+          </div>
         </div>
-        <% end %>
-    </div>
-  <% end %>
+      <% end %>
+    <% end %>
+  </div>
 </div>

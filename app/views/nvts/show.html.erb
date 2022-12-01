@@ -1,23 +1,22 @@
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<h1>Show page</h1>
+<div class="container">
+  <div class="container-text-intro">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+          <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
+      </svg>
+    <span filter-content="S"> Show Page </span>
+  </div>
 
-
-
-<div class="card-show">
-  <%= image_tag @nvt.picture %>
-
-  <div class="card-show-infos">
-    <h3><%= @nvt.category %></h3>
-    <h2><%= @nvt.title %></h2>
-    <p><%= @nvt.price %> <strong>$NVC</strong></p>
+    <div class="card-show">
+      <%= image_tag @nvt.picture %>
+      <div class="card-show-infos">
+        <h3><%= @nvt.category %></h3>
+        <h2><%= @nvt.title %></h2>
+        <p><%= @nvt.price %> <strong>$NVC</strong></p>
+      </div>
+    </div>
+  <div class="container-content">
+    <p><%= @nvt.content %>
   </div>
 </div>
-
-<p><%= @nvt.content %>
