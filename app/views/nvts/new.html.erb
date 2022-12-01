@@ -1,12 +1,16 @@
 <div class="container">
+<div class="row justify-content-center">
   <h3>Add NVTs to your collection</h3>
-    <%= simple_form_for (@nvt), html: { class: "container mt-5"} do |f| %>
-      <%= f.input :title, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :content, wrapper_html: { class: "nice-class" }%>
-      <%= f.input :date, as: :date, html5: true, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :category, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :price, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
+    <div class="col-8">
+      <%= simple_form_for (@nvt), html: { class: "container mt-5"} do |f| %>
+        <%= f.input :title, wrapper_html: { class: "nice-class" } %>
+        <%= f.input :content, wrapper_html: { class: "nice-class" }%>
+        <%= f.input :date, as: :date, html5: true, wrapper_html: { class: "nice-class" } %>
+        <%= f.input :category, wrapper_html: { class: "nice-class" } %>
+        <%= f.input :price, wrapper_html: { class: "nice-class" } %>
+        <%= f.input :photo, as: :file %>
+        <%= f.submit class: 'btn btn-secondary' %>
+      <% end %>
+    </div>
+   </div>
 </div>
