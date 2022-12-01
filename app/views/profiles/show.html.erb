@@ -1,0 +1,78 @@
+
+<h1>Profile page</h1>
+
+<div class="user-settings">
+  <div style="margin-top: 25px; margin-bottom:25px ">
+    <hr>
+  </div>
+  <h2><b><%= current_user.username %>'s Profile</b></h2>
+  <div class="user-name-email">
+    <p>E-Mail: <%= current_user.email %></p>
+  </div>
+</div>
+
+
+<div class="row m-2">
+  <h2>My transactions</h2>
+  <div class="empty-message ms-4 mt-2">
+    <span class="d-block"><small><em class="text-muted"><%= "You haven't bought any NVTs yet!" if @transactions.empty? %></em></small></span>
+  </div>
+  <% @transactions.each do |transaction| %>
+  <div class="col-lg-3">
+    <div class="card">
+      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.picture %>" alt="<%= transaction.nvt.title %>" style="width:321px">
+      <div class="card-body">
+        <h2><%= link_to transaction.nvt.title, transaction_path(transaction) %></h2>
+        <div class="d-flex">
+          <p><%= transaction.nvt.content %> </p>
+          <div class="price"> <br>
+          <p><%= transaction.nvt.price %> ₽/NVT</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="row m-2">
+  <h2>My requested transactions</h2>
+    <div class="empty-message ms-4 mt-2">
+      <span class="d-block"><small><em class="text-muted"><%= "Nobody wants to buy your NVTs!" if @pending_transactions.empty? %></em></small></span>
+    </div>
+  <% @pending_transactions.each do |transaction| %>
+  <div class="col-lg-3">
+    <div class="card">
+      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.picture %>" alt="<%= transaction.nvt.title %>" style="width:321px">
+      <div class="card-body">
+        <h2><%= link_to transaction.nvt.title, transaction_path(transaction) %></h2>
+        <div class="d-flex">
+          <p> <%= transaction.nvt.content %> </p>
+          <div class="price"> <br>
+          <p><%= transaction.nvt.price %> ₽/NVT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
+
+<div class="row m-2">
+  <h2>My NVTs</h2>
+  <% @nvts.each do |nvt| %>
+  <div class="col-lg-3">
+    <div class="card">
+      <img class="nvt-img m-1 p-1" src="<%= nvt.picture %>" alt="<%= nvt.title %>" style="width:321px">
+      <div class="card-body">
+        <h2><%= link_to nvt.title, nvt_path(nvt) %></h2>
+        <div class="d-flex">
+          <p><%= nvt.content %> </p>
+          <div class="price"> <br>
+          <p><%= nvt.price %> ₽/NVT</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% end %>
+</div>
