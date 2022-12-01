@@ -6,6 +6,7 @@
         <h5><i><%= current_user.username %>, buy the NVT <%= @nvt.title %>!</h5></i>
         <%= simple_form_for [@nvt, @transaction] do |f| %>
           <%= f.input :comment, label: "Comment", as: :string, required: false %>
+          <% @transaction.status = "pending"  %>
           <%= f.submit "Buy!", class: "btn btn-info" %>
         <% end %>
       </div>
