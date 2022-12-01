@@ -2,6 +2,7 @@
 
 <div class="cards">
   <% @nvts.each do |nvt| %>
+  <%= link_to nvt_path(nvt) do %>
     <div class="card-item">
       <%= image_tag nvt.picture %>
         <div class="card-item-infos">
@@ -9,6 +10,7 @@
           <h2><%= nvt.title %></h2>
           <p><%= nvt.price %> <strong>$NVC</strong></p>
         </div>
+        <% end %>
     </div>
   <% end %>
 </div>
