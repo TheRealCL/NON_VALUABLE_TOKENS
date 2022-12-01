@@ -1,8 +1,22 @@
 <h1> NVT'S Collection </h1>
-<% @nvts.each do |nvt| %>
-<%=nvt.title %>
-<%=nvt.content %>
-<%=nvt.category %>
-<%= image_tag nvt.picture %>
-<%=nvt.price %>
-<%  end  %>
+<div class="cards">
+
+    <% @nvts.each do |nvt| %>
+    <div class="card-item">
+      <img src="https://img.seadn.io/files/4726610c4327ac5acbd13458fe52e152.png?fit=max&w=1000" />
+        <div class="card-item-infos">
+          <h3><%= nvt.category %></h3>
+          <h2><%= nvt.title %></h2>
+          <p><%= nvt.price %> <strong>$NVC</strong></p>
+        </div>
+     </div>
+    <% end %>
+</div>
+
+  <%# <% @nvts.each do |nvt| %> %> %>
+  <%# <%=nvt.title %> %>
+  <%# <%=nvt.content %> %>
+  <%# <%=nvt.category %> %>
+  <%# <%= image_tag nvt.picture %> %>
+  <%# <%=nvt.price %> %>
+  <%# <%  end %>
