@@ -1,8 +1,16 @@
 <h1> NVT'S Collection </h1>
-<% @nvts.each do |nvt| %>
-<%=nvt.title %>
-<%=nvt.content %>
-<%=nvt.category %>
-<%= image_tag nvt.picture %>
-<%=nvt.price %>
-<%  end  %>
+
+<div class="cards">
+  <% @nvts.each do |nvt| %>
+  <%= link_to nvt_path(nvt) do %>
+    <div class="card-item">
+      <%= image_tag nvt.picture %>
+        <div class="card-item-infos">
+          <h3><%= nvt.category %></h3>
+          <h2><%= nvt.title %></h2>
+          <p><%= nvt.price %> <strong>$NVC</strong></p>
+        </div>
+        <% end %>
+    </div>
+  <% end %>
+</div>
