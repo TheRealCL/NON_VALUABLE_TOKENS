@@ -1,11 +1,12 @@
 
 // --- show page --- //
 
-.card-product {
+.card-show {
   overflow: hidden;
   height: 360px;
   background: #111927;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -13,49 +14,43 @@
   color: #8DB1CD;
 }
 
-.card-product:hover {
+.card-show:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  transition: 0.3s;
+  transform: scale(0.9, 0.9);
 }
 
-.card-product img {
+.card-show img {
   height: 100%;
   width: 360px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.card-product h3 {
-  font-size: 36px;
+.card-show h3 {
+  font-size: 54px;
   font-style: sans-serif inherit;
 }
 
-.card-product h2 {
-  font-size: 48px;
+.card-show h2 {
+  font-size: 72px;
   font-style: sans-serif inherit;
   margin: 0;
+  border-bottom: solid #1A2332;
 }
 
-.card-product p {
-  font-size: 24px;
+.card-show p {
+  font-size: 36px;
   font-style: sans-serif inherit;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
+.card-show .card-show-infos {
+  padding: 48px;
+  margin-left: 24px;
 }
 
-.card-product-actions {
-  background-color: black;
-}
 
 
 
@@ -67,11 +62,12 @@
   grid-gap: 16px;
 }
 
-.card-category {
+.card-item {
   overflow: hidden;
   height: 120px;
   background: #111927;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
   display: flex;
   align-items: center;
   border-radius: 10px;
@@ -79,46 +75,39 @@
   color: #8DB1CD;
 }
 
-.card-category:hover {
+.card-item:hover {
   box-shadow: 0 0 15px rgba(0,0,0,0.6);
-  transition: 0.3s;
+  transform: scale(0.9, 0.9);
 }
 
-.card-category img {
+.card-item img {
   height: 100%;
   width: 120px;
   object-fit: cover;
   border-radius: 10px;
 }
 
-.card-category h3 {
-  font-size: 12px;
+.card-item h3 {
+  font-size: 18px;
   font-style: sans-serif inherit;
 }
 
-.card-category h2 {
-  font-size: 16px;
+.card-item h2 {
+  font-size: 24px;
   font-style: sans-serif inherit;
   margin: 0;
+  border-bottom: solid #1A2332;
 }
 
-.card-category p {
-  font-size: 8px;
+.card-item p {
+  font-size: 12px;
   font-style: sans-serif inherit;
   line-height: 1.4;
-  opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
-.card-category .card-product-infos {
+.card-item .card-item-infos {
   padding: 16px;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  position: relative;
-}
-
-.card-categroy-actions {
-  background-color: black;
+  margin-left: 8px;
 }
