@@ -14,8 +14,9 @@ class NvtsController < ApplicationController
 
   def create
     @nvt = Nvt.new(nvt_params)
+    @nvt.user = current_user
     if @nvt.save
-      redirect_to profile_path
+      redirect_to root_path
     else
       render :new, status: :unprocessable_entity
     end
@@ -33,7 +34,7 @@ class NvtsController < ApplicationController
   end
 
   def nvt_params
-    params_require(:nvt).permit(:title, :content, :category, :date, :price, photo: [])
+    params.require(:nvt).permit(:title, :content, :category, :date, :price, :photo)
   end
 
 end

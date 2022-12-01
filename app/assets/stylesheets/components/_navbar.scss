@@ -54,7 +54,7 @@
   transform: scale(0.9, 0.9);
 }
 
-form {
+.navbar form {
   width: 500px;
   height: 40px;
   display:flex;
@@ -63,7 +63,7 @@ form {
   margin-left: 10px;
 }
 
-input {
+.navbar input {
   background-color: #1A2332;
   border: none;
   border-top-right-radius: 0px;
@@ -75,7 +75,7 @@ input {
   padding-left: 20px;
 }
 
-button {
+.navbar button {
   background-color: #1A2332;
   border: none;
   border-top-right-radius: 50px;
