@@ -16,7 +16,7 @@ class NvtsController < ApplicationController
     @nvt = Nvt.new(nvt_params)
     @nvt.user = current_user
     if @nvt.save
-      redirect_to root_path
+      redirect_to profile_path
     else
       render :new, status: :unprocessable_entity
     end
