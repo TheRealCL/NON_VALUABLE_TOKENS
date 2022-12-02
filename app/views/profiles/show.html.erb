@@ -62,7 +62,7 @@
   <% @nvts.each do |nvt| %>
   <div class="col-lg-3">
     <div class="card">
-      <img class="nvt-img m-1 p-1" src="<%= nvt.picture %>" alt="<%= nvt.title %>" style="width:321px">
+      <img class="nvt-img m-1 p-1" src="<%= nvt.photo.key %>" alt="<%= nvt.title %>" style="width:321px">
       <div class="card-body">
         <h2><%= link_to nvt.title, nvt_path(nvt) %></h2>
         <div class="d-flex">

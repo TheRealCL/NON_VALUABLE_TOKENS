@@ -15,12 +15,12 @@ user_4 = User.create!(username: "David", email: "user_4@example.com", password: 
 puts 'Creating nvts...'
 
 nvt_1 = Nvt.new(title: "th_27_xlmal2", content: "Nostalgic for Neopets? Pining for club penguin? Missing moshi monsters? Never fear, Gimme Gargoyles is here! Grab your Gargoyle!", price: "390", category: "art", date: "2022-11-11")
-file_1 = URI.open("https://res.cloudinary.com/ddubtsk96/image/upload/v1669510485/production/ow17lnf8gsemz83swt10yuy3q70g.jpg")
-nvt_1.photo.attach(io: file_1, filename: "th_27_xlmal2.png", content_type: "image/png")
+file_1 = URI.open("https://res.cloudinary.com/duotc6hkn/image/upload/v1669828109/NVTs/th_27_xlmal2.jpg")
+nvt_1.photo.attach(io: file_1, filename: "th_27_xlmal2.jpg", content_type: "image/jpg")
 
 nvt_2 = Nvt.new(title: "th_122_fh8udw", content: "3d Brave buddha chinese tiger. The collection includes 10,000 unique nvts which each buddha chinese tiger has its own story, live like a king tiger.", price: "200", category: "animal", date: "2022-10-20")
-file_2 = URI.open("https://seaworld.org/-/media/seaworld-dotorg/images/infobooks/gorillas/section-content/physical-characteristics/pic-sea-gorilla-pc-03.ashx?hash=401F7B51070154BC28305515742E090880144BCC&version=1_201812033535&h=300&w=381&la=en")
-nvt_2.photo.attach(io: file_2, filename: "th_122_fh8udw.png", content_type: "image/png")
+file_2 = URI.open("https://res.cloudinary.com/duotc6hkn/image/upload/v1669828112/NVTs/th_122_fh8udw.jpg")
+nvt_2.photo.attach(io: file_2, filename: "th_122_fh8udw.jpg", content_type: "image/jpg")
 
 nvt_3 = Nvt.new(title: "th_121_y83ewh", content: "A community-driven collectibles project featuring art by Burnt Toast. Th_121_y83ewh comes in a joyful range of colors, traits and sizes with a collection size of 10,000. Each th_121_y83ewh allows its owner to vote for experiences and activations paid for by the Community Treasury. Burnt Toast is the working alias for Scott Martin, a Canadian–based illustrator, designer, animator and muralist.", price: "320", category: "sport", date: "2022-10-30")
 file_3 = URI.open("https://res.cloudinary.com/duotc6hkn/image/upload/v1669828112/NVTs/th_121_y83ewh.jpg")
