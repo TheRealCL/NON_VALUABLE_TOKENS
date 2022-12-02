@@ -1,23 +1,23 @@
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
-<h1>Show page</h1>
+<div class="container">
+  <h1>Details</h1>
 
+  <div class="card-show">
+    <%= image_tag @nvt.picture %>
 
-
-<div class="card-show">
-  <%= image_tag @nvt.picture %>
-
-  <div class="card-show-infos">
-    <h3><%= @nvt.category %></h3>
-    <h2><%= @nvt.title %></h2>
-    <p><%= @nvt.price %> <strong>$NVC</strong></p>
+    <div class="card-show-infos">
+      <h3><%= @nvt.category %></h3>
+      <h2><%= @nvt.title %></h2>
+      <p><%= @nvt.price %> <strong>$NVC</strong></p>
+    </div>
   </div>
-</div>
 
-<p><%= @nvt.content %>
+  <div class="container-content-display">
+    <br>
+    <p><%= @nvt.content %> </p>
+    <br>
+    <br>
+    <p><strong>Interested in collecting this item?</strong></p>
+  <%= link_to 'Collect', transaction_path %>
+  </div>
+
+</div>
