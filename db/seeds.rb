@@ -8,7 +8,7 @@ User.destroy_all
 
 puts 'Creating users...'
 user_1 = User.create!(username: "Cedric", email: "user_1@example.com", password: "123456")
-user_2 = User.create!(username: "Rox the Terrible ", email: "user_2@example.com", password: "123456")
+user_2 = User.create!(username: "Rox", email: "user_2@example.com", password: "123456")
 user_3 = User.create!(username: "Joe", email: "user_3@example.com", password: "123456")
 user_4 = User.create!(username: "David", email: "user_4@example.com", password: "123456")
 
