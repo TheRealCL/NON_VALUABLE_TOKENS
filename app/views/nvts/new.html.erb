@@ -11,23 +11,11 @@
   <div class="card-create">
     <%= simple_form_for @nvt do |f| %>
       <%= f.input :title, placeholder: 'nom de votre NVT' %>
-      <%= f.input :content, placeholder: 'entrez une description' %>
-      <%= f.input :date, placeholder: 'date de création' %>
       <%= f.input :category, placeholder: 'entrez la catégorie' %>
+      <%= f.input :date, as: :date, html5: true, placeholder: 'date de création' %>
       <%= f.input :price, placeholder: 'entrez votre prix' %>
-      <%= f.input :photo, as: :file %>
+      <%= f.input :content, placeholder: 'entrez une description' %>
+      <%= f.input :photo, as: :file, input_html: { class: "ps-2" }%>
       <%= f.submit class: 'btn btn-flat' %>
     <% end %>
   </div>
- 
-  <h3>Add NVTs to your collection</h3>
-    <%= simple_form_for (@nvt), html: { class: "container mt-5"} do |f| %>
-      <%= f.input :title, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :content, wrapper_html: { class: "nice-class" }%>
-      <%= f.input :date, as: :date, html5: true, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :category, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :price, wrapper_html: { class: "nice-class" } %>
-      <%= f.input :photo, as: :file %>
-      <%= f.submit class: 'btn btn-primary' %>
-    <% end %>
-</div>
