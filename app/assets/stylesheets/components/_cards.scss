@@ -144,11 +144,43 @@
 
 .card-create input {
   background-color: #1A2332;
-  border: none;
+  border: solid 1px #8DB1CD;
   border-radius: 50px;
   flex-grow:2;
   color: #8DB1CD;
   padding-left: 20px;
+}
+
+
+
+// --- Profile page --- //
+
+.card-profile {
+  overflow: hidden;
+  justify-content: center;
+  // height: 720px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  // margin: 10%;
+  color: #8DB1CD;
+}
+
+.card-profile .card-item {
+  overflow: hidden;
+  height: 120px;
+  // width: 100%;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10%;
+  color: #8DB1CD;
 }
 
 
@@ -163,4 +195,44 @@
   margin: 5%;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   color: #8DB1CD;
+  justify-content: center;
+}
+
+
+
+// --- TRANSACTION --- //
+
+.card-transaction {
+  overflow: hidden;
+  height: 720px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  color: #8DB1CD;
+  justify-content: center
+}
+
+.card-transaction:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transform: scale(0.9, 0.9);
+}
+
+.card-transaction form {
+  width: 90%;
+  flex-direction:row;
+  padding:2px;
+  margin: 10%;
+}
+
+.card-transaction input {
+  background-color: #1A2332;
+  border: none;
+  border-radius: 50px;
+  flex-grow:2;
+  color: #8DB1CD;
+  padding-left: 20px;
 }
