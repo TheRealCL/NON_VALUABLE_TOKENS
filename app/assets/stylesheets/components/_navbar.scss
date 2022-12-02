@@ -26,12 +26,11 @@
   color: #8DB1CD;
 }
 
-#navbar-index {
-  li {
-    margin-right: 40px;
-    margin-left: 40px;
-    font-size: 20px;
-  }
+#navbar-index li {
+  margin-right: 40px;
+  margin-left: 40px;
+  font-size: 20px;
+
 }
 
 .navbar {
@@ -47,10 +46,22 @@
 
 .navbar li {
   transition: 0.3s;
+  text-decoration: none;
 }
 
 .navbar li:hover {
   transform: scale(0.9, 0.9);
+}
+
+a {
+  text-decoration: none;
+  color: #8DB1CD;
+  font-family: sans-serif inherit;
+  transition: 0.3s;
+}
+
+a:hover {
+  color: #6e8aa0;
 }
 
 .navbar form {

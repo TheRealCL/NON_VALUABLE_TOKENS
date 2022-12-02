@@ -1,4 +1,25 @@
 <div class="container">
+    <div class="container-text-intro">
+      <svg xmlns="http://www.w3.org/2000/svg">
+        <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+          <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
+      </svg>
+    <span filter-content="S"> Create content </span>
+  </div>
+
+  <div class="card-create">
+    <%= simple_form_for @nvt do |f| %>
+      <%= f.input :title, placeholder: 'nom de votre NVT' %>
+      <%= f.input :content, placeholder: 'entrez une description' %>
+      <%= f.input :date, placeholder: 'date de création' %>
+      <%= f.input :category, placeholder: 'entrez la catégorie' %>
+      <%= f.input :price, placeholder: 'entrez votre prix' %>
+      <%= f.input :photo, as: :file %>
+      <%= f.submit class: 'btn btn-flat' %>
+    <% end %>
+  </div>
+ 
   <h3>Add NVTs to your collection</h3>
     <%= simple_form_for (@nvt), html: { class: "container mt-5"} do |f| %>
       <%= f.input :title, wrapper_html: { class: "nice-class" } %>
