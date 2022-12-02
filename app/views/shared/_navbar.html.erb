@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-md navbar-dark fixed-top bg-dark navbar-lewagon">
+<div class="navbar navbar-expand-md fixed-top navbar-lewagon">
   <div class="container-fluid">
     <div class="navbar-logo">
       <%= link_to "#", class: "navbar-brand" do %>
@@ -16,8 +16,10 @@
 
     <div id="navbar-index">
       <ul class="nav navbar-nav">
-        <li><%= link_to 'Explore', nvts_path(@nvts) %></li>
-        <li><%= link_to 'Sell content', new_nvt_path(@nvt) %></li>
+        <%# <li><%= link_to 'Explore', nvts_path(@nvts) %></li>
+        <li><%= link_to 'Explore', nvts_path %></li>
+        <li><%= link_to 'Create content', new_nvt_path(@nvt) %></li>
+        <%# <li><%= link_to 'Sell content', new_nvt_path(@nvt) %></li>
         <li><%= link_to 'My collection', profile_path %></li>
       </ul>
     </div>

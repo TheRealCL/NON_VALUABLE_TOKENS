@@ -4,13 +4,14 @@
 .card-show {
   overflow: hidden;
   height: 360px;
+  width: 100%;
   background: #111927;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: 0.3s;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin: 10%;
+  margin: auto;
   color: #8DB1CD;
 }
 
@@ -53,25 +54,25 @@
 
 
 
-
 // --- index page --- //
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 16px;
+  grid-gap: 64px;
 }
 
 .card-item {
   overflow: hidden;
   height: 120px;
+  width: 100%;
   background: #111927;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: 0.3s;
   display: flex;
   align-items: center;
   border-radius: 10px;
-  margin: 10%;
+  margin-top: 10%;
   color: #8DB1CD;
 }
 
@@ -110,4 +111,56 @@
 .card-item .card-item-infos {
   padding: 16px;
   margin-left: 8px;
+}
+
+
+
+// --- Create page --- //
+
+.card-create {
+  overflow: hidden;
+  height: 720px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10%;
+  color: #8DB1CD;
+}
+
+.card-create:hover {
+  box-shadow: 0 0 15px rgba(0,0,0,0.6);
+  transform: scale(0.9, 0.9);
+}
+
+.card-create form {
+  width: 90%;
+  flex-direction:row;
+  padding:2px;
+  margin: 10%;
+}
+
+.card-create input {
+  background-color: #1A2332;
+  border: none;
+  border-radius: 50px;
+  flex-grow:2;
+  color: #8DB1CD;
+  padding-left: 20px;
+}
+
+
+
+// --- ROX --- //
+
+.card-form {
+  overflow: hidden;
+  height: 360px;
+  background: #111927;
+  border-radius: 10px;
+  margin: 5%;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  color: #8DB1CD;
 }
