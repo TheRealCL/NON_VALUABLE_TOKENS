@@ -9,7 +9,7 @@
   </div>
 
   <div class="card-show">
-    <%= image_tag @nvt.picture %>
+    <%= cl_image_tag @nvt.photo.key %>
 
     <div class="card-show-infos">
       <h3><%= @nvt.category %></h3>
