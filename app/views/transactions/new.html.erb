@@ -1,17 +1,14 @@
-<div class="container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <div class="bg-white rounded p-3 shadow">
-        <h2>New transaction</h2>
-        <h5><i><%= current_user.username %>, buy the NVT <%= @nvt.title %>!</h5></i>
-        <%= simple_form_for [@nvt, @transaction] do |f| %>
-          <%= f.input :comment, label: "Comment", as: :string, required: false %>
-          <%= f.submit "Buy!", class: "btn btn-info" %>
-        <% end %>
-      </div>
-      <div class="transaction-show-owner-info">
-        <p>Sold by <%= link_to @nvt.user.username %></p>
-      </div>
+<div class="container">
+
+  <div class="card-transaction">
+      <h2>New transaction</h2>
+      <h5><i><%= current_user.username %>, buy the NVT <%= @nvt.title %>!</h5></i>
+      <%= simple_form_for [@nvt, @transaction] do |f| %>
+        <%= f.input :comment, label: "Comment", as: :string, required: false %>
+        <%= f.submit "Buy!", class: "button" %>
+      <% end %>
+    <div class="transaction-show-owner-info">
+      <p>Sold by <%= link_to @nvt.user.username %></p>
     </div>
   </div>
 </div>
