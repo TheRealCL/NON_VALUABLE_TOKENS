@@ -1,15 +1,15 @@
-// .button-collect {
-//   display: block;
-//   width: 100%;
-//   border: none;
-//   background-color: #04AA6D;
-//   padding: 14px 28px;
-//   font-size: 16px;
-//   cursor: pointer;
-//   text-align: center;
-// }
+.button {
+  display: block;
+  border: none;
+  background-color: #8DB1CD;
+  padding: 14px 28px;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  text-align: center;
+}
 
-// .button-collect:hover {
-//   background: #658195;
-//   color: white;
-// }
+.button:hover {
+  background: #658195;
+  color: #ffffff;
+}
