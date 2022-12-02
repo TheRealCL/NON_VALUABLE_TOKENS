@@ -153,6 +153,38 @@
 
 
 
+// --- Profile page --- //
+
+.card-profile {
+  overflow: hidden;
+  justify-content: center;
+  // height: 720px;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  // margin: 10%;
+  color: #8DB1CD;
+}
+
+.card-profile .card-item {
+  overflow: hidden;
+  height: 120px;
+  // width: 100%;
+  background: #111927;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  margin: 10%;
+  color: #8DB1CD;
+}
+
+
+
 // --- ROX --- //
 
 .card-form {
@@ -163,4 +195,5 @@
   margin: 5%;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   color: #8DB1CD;
+  justify-content: center;
 }

@@ -1,6 +1,7 @@
 /* We set the position to relative so that we can stack a blurred pseudo element on top of the original text */
 
 span {
+  text-align: center;
   position: relative;
   font-family: "Avenir Next", sans-serif;
   font-weight: 900;
@@ -9,6 +10,7 @@ span {
   font-style: italic;
   letter-spacing: 0.05em;
   display: inline-block;
+  color: #ffffff;
 }
 
 /* We create a pseudo element and blur it using the SVG filter. We’ll grab the content from the custom HTML attribute. */
