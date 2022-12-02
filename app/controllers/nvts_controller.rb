@@ -15,6 +15,7 @@ class NvtsController < ApplicationController
   def create
     @nvt = Nvt.new(nvt_params)
     @nvt.user = current_user
+
     if @nvt.save
       redirect_to profile_path
     else

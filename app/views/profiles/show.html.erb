@@ -20,7 +20,7 @@
   <% @transactions.each do |transaction| %>
   <div class="col-lg-3">
     <div class="card">
-      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.picture %>" alt="<%= transaction.nvt.title %>" style="width:321px">
+      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.photo.key %>" alt="<%= transaction.nvt.title %>" style="width:321px">
       <div class="card-body">
         <h2><%= link_to transaction.nvt.title, transaction_path(transaction) %></h2>
         <div class="d-flex">
@@ -42,7 +42,7 @@
   <% @pending_transactions.each do |transaction| %>
   <div class="col-lg-3">
     <div class="card">
-      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.picture %>" alt="<%= transaction.nvt.title %>" style="width:321px">
+      <img class="nvt-img m-1 p-1" src="<%= transaction.nvt.photo.key %>" alt="<%= transaction.nvt.title %>" style="width:321px">
       <div class="card-body">
         <h2><%= link_to transaction.nvt.title, transaction_path(transaction) %></h2>
         <div class="d-flex">

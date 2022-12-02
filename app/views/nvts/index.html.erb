@@ -7,12 +7,12 @@
       </svg>
     <span filter-content="S"> Navigate throught the marketplace </span>
   </div>
-  
+
   <div class="cards">
     <% @nvts.each do |nvt| %>
     <%= link_to nvt_path(nvt) do %>
       <div class="card-item">
-        <%= image_tag nvt.picture %>
+        <%= cl_image_tag nvt.photo.key %>
           <div class="card-item-infos">
             <h3><%= nvt.category %></h3>
             <h2><%= nvt.title %></h2>
