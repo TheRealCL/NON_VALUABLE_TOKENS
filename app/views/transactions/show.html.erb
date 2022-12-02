@@ -13,7 +13,7 @@
           <p><i>Bought by <%= @transaction.user.username %></i></p>
           <p><strong><%= @transaction.comment %></strong></p>
           <% if @transaction.pending? %>
-            <p>PENDING CONFIRMATION BY OWNER</p>
+            <p><b>PENDING CONFIRMATION BY OWNER</b></p>
           <% elsif @transaction.confirmed? %>
             <p><b>ACCEPTED</b></p>
           <% else %>
