@@ -11,8 +11,9 @@
         </div>
         <div class="transaction-show-status">
           <p><i>Bought by <%= @transaction.user.username %></i></p>
+          <p><strong><%= @transaction.comment %></strong></p>
           <% if @transaction.pending? %>
-            <p><b>PENDING CONFIRMATION BY OWNER</b></p>
+            <p>PENDING CONFIRMATION BY OWNER</p>
           <% elsif @transaction.confirmed? %>
             <p><b>ACCEPTED</b></p>
           <% else %>
