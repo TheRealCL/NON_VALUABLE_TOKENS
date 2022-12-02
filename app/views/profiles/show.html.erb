@@ -26,7 +26,7 @@
           <span class="d-block"><small><em class="text-muted"><%= "You haven't bought any NVTs yet!" if @transactions.empty? %></em></small></span>
         <% @transactions.each do |transaction| %>
           <div class="card-item">
-            <img src="<%= transaction.nvt.picture %>" alt="<%= transaction.nvt.title %>">
+            <img src="<%= transaction.nvt.photo.key %>" alt="<%= transaction.nvt.title %>">
             <div class="card-item-infos">
               <h3><%= link_to transaction.nvt.category, transaction_path(transaction) %></h3>
                 <h2><%= transaction.nvt.title %> </h2>
@@ -41,7 +41,7 @@
         <br>
 
         <h2>My requested transactions</h2>
-            <span class="d-block"><small><em class="text-muted"><%= "Nobody wants to buy your NVTs!" if @pending_transactions.empty? %></em></small></span>
+            <span class="d-block"><small><em class="text-muted"><%= "You have No ask on your NVTs!" if @pending_transactions.empty? %></em></small></span>
         <% @pending_transactions.each do |transaction| %>
           <div class="card-item">
             <img src="<%= transaction.nvt.photo.key %>" alt="<%= transaction.nvt.title %>">
