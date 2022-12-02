@@ -1,53 +1,57 @@
 <br>
 <br>
 <br>
-<div class="transaction-show-container py-5">
-  <div class="row">
-    <div class="col-12 col-md-6 offset-lg-3">
-      <h3>Confirmed transaction for NVT <i><%= @transaction.nvt.title %></i></h3>
-      <div class="bg-white rounded p-3 shadow">
-        <div class="transaction-show-description">
-          <p><%= @transaction.nvt.content %></p>
-        </div>
-        <div class="transaction-show-status">
-          <p><i>Bought by <%= @transaction.user.username %></i></p>
-          <% if @transaction.pending? %>
-            <p><b>PENDING CONFIRMATION BY OWNER</b></p>
-          <% elsif @transaction.confirmed? %>
-            <p><b>ACCEPTED</b></p>
-          <% else %>
-            <p><b>SORRY THE TRANSACTION WAS CANCELED</b></p>
-          <% end %>
-        </div>
-        <div class="transaction-show-boxes">
-          <div class="transaction-details">
-            <div style="margin-top: 25px; margin-bottom:25px">
-              <hr>
+<div class="container">
+  <div class="card-transaction">
+    <div class="transaction-show-container py-5">
+      <%# <div class="row"> %>
+        <%# <div class="col-12 col-md-6 offset-lg-3"> %>
+          <h3>Confirmed transaction for NVT <i><%= @transaction.nvt.title %></i></h3>
+          <div class=" rounded p-3 shadow">
+            <div class="transaction-show-description">
+              <p><%= @transaction.nvt.content %></p>
             </div>
-            <div class="transaction-show-owner-info">
-            <p>Owned by: <%= @transaction.nvt.user.username %> &nbsp&nbsp|&nbsp&nbsp E-mail: <%= @transaction.nvt.user.email %></p>
+            <div class="transaction-show-status">
+              <p><i>Bought by <%= @transaction.user.username %></i></p>
+              <% if @transaction.pending? %>
+                <p><b>PENDING CONFIRMATION BY OWNER</b></p>
+              <% elsif @transaction.confirmed? %>
+                <p><b>ACCEPTED</b></p>
+              <% else %>
+                <p><b>SORRY THE TRANSACTION WAS CANCELED</b></p>
+              <% end %>
             </div>
+            <div class="transaction-show-boxes">
+              <div class="transaction-details">
+                <div style="margin-top: 25px; margin-bottom:25px">
+                  <hr>
+                </div>
+                <div class="transaction-show-owner-info">
+                <p>Owned by: <%= @transaction.nvt.user.username %> &nbsp&nbsp|&nbsp&nbsp E-mail: <%= @transaction.nvt.user.email %></p>
+                </div>
+              </div>
+              <div class="transaction-costs">
+                <p>Total price: <%= @transaction.nvt.price %> ₽/NVT </p>
+              </div>
+            </div>
+
+            <% if current_user == @transaction.user %>
+            <%= link_to "Edit", edit_transaction_path(@transaction), class: 'btn btn-primary' %>
+            <%= link_to "Cancel", transaction_path(@transaction), class: 'btn btn-primary',
+            method: :destroy,
+            data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
+
+            <% elsif current_user == @transaction.nvt.user %>
+            <%= link_to "Accept transaction", confirm_status_path(@transaction, transaction: {status: 'confirmed'}), class: 'btn btn-primary',
+            data: { turbo_method: :patch } %>
+
+            <%= link_to "Reject transaction", confirm_status_path(@transaction, transaction: {status: 'rejected'}), class: 'btn btn-primary',
+            data: { turbo_method: :patch } %>
+            <% end %>
+            <%= link_to "Profile", profile_path, class: 'btn btn-info' %>
           </div>
-          <div class="transaction-costs">
-            <p>Total price: <%= @transaction.nvt.price %> ₽/NVT </p>
-          </div>
-        </div>
-
-        <% if current_user == @transaction.user %>
-        <%= link_to "Edit", edit_transaction_path(@transaction), class: 'btn btn-primary' %>
-        <%= link_to "Cancel", transaction_path(@transaction), class: 'btn btn-primary',
-        method: :destroy,
-        data: { turbo_method: :delete, turbo_confirm: 'Are you sure?' } %>
-
-        <% elsif current_user == @transaction.nvt.user %>
-        <%= link_to "Accept transaction", confirm_status_path(@transaction, transaction: {status: 'confirmed'}), class: 'btn btn-primary',
-        data: { turbo_method: :patch } %>
-
-        <%= link_to "Reject transaction", confirm_status_path(@transaction, transaction: {status: 'rejected'}), class: 'btn btn-primary',
-        data: { turbo_method: :patch } %>
-        <% end %>
-        <%= link_to "Profile", profile_path, class: 'btn btn-info' %>
-      </div>
+        <%# </div> %>
+      <%# </div> %>
     </div>
   </div>
 </div>
