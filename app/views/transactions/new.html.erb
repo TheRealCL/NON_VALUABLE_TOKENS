@@ -1,6 +1,6 @@
 <div class="container">
 
-  <div class="card-form">
+  <div class="card-new-transaction">
       <h2>New transaction</h2>
       <h5><i><%= current_user.username %>, buy the NVT <%= @nvt.title %>!</h5></i>
       <%= simple_form_for [@nvt, @transaction] do |f| %>
