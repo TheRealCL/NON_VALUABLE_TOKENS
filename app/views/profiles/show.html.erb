@@ -10,7 +10,7 @@
 
   <div class="container-profile">
     <div class="card-profile">
-      <div class="container-profile">
+      <%# <div class="container-profile"> %>
         <div class="user-settings">
           <h2><b><%= current_user.username %>'s Profile</b></h2>
           <div class="user-name-email">
@@ -33,6 +33,7 @@
                 <div class="price">
                   <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
               </div>
+            </div>
           </div>
         <% end %>
 
@@ -52,13 +53,13 @@
                   <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
                 </div>
             </div>
-
           </div>
         <% end %>
 
         <br>
         <br>
         <br>
+
         <h2>My NVTs</h2>
         <% @nvts.each do |nvt| %>
           <div class="card-item">
@@ -73,8 +74,12 @@
 
           </div>
         <% end %>
-      </div>
+      <%# </div> %>
     </div>
   </div>
 
 </div>
+
+<br>
+<br>
+<br>
