@@ -7,13 +7,13 @@
   transition: 0.3s;
 }
 
-.container p {
-  text-align: center;
-  font-size: 24px;
-  color: #ffffff;
-  text-shadow: 0 0 15px rgba(0,0,0,0.3);
-  transition: 0.3s;
-}
+// .container p {
+//   text-align: center;
+//   font-size: 24px;
+//   color: #ffffff;
+//   text-shadow: 0 0 15px rgba(0,0,0,0.3);
+//   transition: 0.3s;
+// }
 
 .container-content-display p {
   font-size: 24px;
@@ -66,6 +66,15 @@
   text-align: center;
   display: block;
   margin-bottom: 20px;
+}
 
+.container-profile {
+  margin: 5%;
+  // text-align: center;
+  display: block;
+  margin-bottom: 20px;
+}
 
+.container-profile-header {
+  text-align: center;
 }

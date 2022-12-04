@@ -162,12 +162,12 @@
   background: #111927;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   transition: 0.3s;
-  display: flex;
   align-items: center;
   border-radius: 10px;
   // margin: 10%;
   color: #8DB1CD;
   margin-bottom: 10px;
+  padding: 50px;
 }
 
 .card-profile .card-item {
@@ -185,22 +185,29 @@
 
 
 
-// --- ROX --- //
+// --- New transaction --- //
 
-.card-form {
+.card-new-transaction {
   overflow: hidden;
   height: 360px;
   background: #111927;
   border-radius: 10px;
-  margin: 5%;
+  padding: 50px;
   box-shadow: 0 0 15px rgba(0,0,0,0.3);
   color: #8DB1CD;
   justify-content: center;
 }
 
+.card-new-transaction input {
+  background-color: #1A2332;
+  border: none;
+  border-radius: 50px;
+  flex-grow:2;
+  color: #8DB1CD;
+}
 
 
-// --- TRANSACTION --- //
+// --- Transaction~ --- //
 
 .card-transaction {
   overflow: hidden;
