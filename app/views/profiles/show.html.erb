@@ -1,82 +1,76 @@
 <div class="container">
   <div class="container-text-intro">
-      <svg xmlns="http://www.w3.org/2000/svg">
-        <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
-          <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
-          </filter>
+    <svg xmlns="http://www.w3.org/2000/svg">
+      <filter id="motion-blur-filter" filterUnits="userSpaceOnUse">
+        <feGaussianBlur stdDeviation="100 0"></feGaussianBlur>
+        </filter>
       </svg>
-    <span filter-content="S">My collection</span>
+    <span filter-content="S" class="mb-5">My collection</span>
   </div>
 
-  <div class="container-profile">
-    <div class="card-profile">
-      <%# <div class="container-profile"> %>
-        <div class="user-settings">
-          <h2><b><%= current_user.username %>'s Profile</b></h2>
-          <div class="user-name-email">
-            <p>E-Mail: <%= current_user.email %></p>
-          </div>
-        </div>
-
-        <br>
-        <br>
-        <br>
-
-        <h2>My transactions</h2>
-          <span class="d-block"><small><em class="text-muted"><%= "You haven't bought any NVTs yet!" if @transactions.empty? %></em></small></span>
-        <% @transactions.each do |transaction| %>
-          <div class="card-item">
-          <%= cl_image_tag transaction.nvt.photo.key %>
-            <div class="card-item-infos">
-              <h3><%= link_to transaction.nvt.category, transaction_path(transaction) %></h3>
-                <h2><%= transaction.nvt.title %> </h2>
-                <div class="price">
-                  <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
-              </div>
-            </div>
-          </div>
-        <% end %>
-
-        <br>
-        <br>
-        <br>
-
-        <h2>My requested transactions</h2>
-            <span class="d-block"><small><em class="text-muted"><%= "You have No ask on your NVTs!" if @pending_transactions.empty? %></em></small></span>
-        <% @pending_transactions.each do |transaction| %>
-          <div class="card-item">
-          <%= cl_image_tag transaction.nvt.photo.key %>
-            <div class="card-item-infos">
-              <h3><%= link_to transaction.nvt.category, transaction_path(transaction) %></h3>
-                <h2> <%= transaction.nvt.title %> </h2>
-                <div class="price">
-                  <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
-                </div>
-            </div>
-          </div>
-        <% end %>
-
-        <br>
-        <br>
-        <br>
-
-        <h2>My NVTs</h2>
-        <% @nvts.each do |nvt| %>
-          <div class="card-item">
-            <%= cl_image_tag nvt.photo.key %>
-            <div class="card-item-infos">
-              <h3><%= link_to nvt.category, nvt_path(nvt) %></h3>
-                <h2><%= nvt.title %> </h2>
-                <div class="price">
-                  <p><%= nvt.price %><strong>$NVC</strong></p>
-                </div>
-            </div>
-
-          </div>
-        <% end %>
-      <%# </div> %>
+  <div class="user-settings">
+    <h2 class="text-center"><b><%= current_user.username %>'s Profile</b></h2>
+    <div class="user-name-email">
+      <p class="text-center">E-Mail: <%= current_user.email %></p>
     </div>
   </div>
+
+  <br>
+  <br>
+  <br>
+
+  <h2 class="text-center mt-5">My transactions</h2>
+  <span class="d-block"><small><em class="text-muted"><%= "You haven't bought any NVTs yet!" if @transactions.empty? %></em></small></span>
+  <div class="cards">
+    <% @transactions.each do |transaction| %>
+      <div class="card-item">
+        <%= cl_image_tag transaction.nvt.photo.key %>
+        <div class="card-item-infos">
+          <h3><%= link_to transaction.nvt.category, transaction_path(transaction) %></h3>
+          <h2><%= transaction.nvt.title %> </h2>
+          <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <h2 class="text-center mt-5">My requested transactions</h2>
+  <span class="d-block"><small><em class="text-muted"><%= "You have No ask on your NVTs!" if @pending_transactions.empty? %></em></small></span>
+  <div class="cards">
+    <% @pending_transactions.each do |transaction| %>
+      <div class="card-item">
+        <%= cl_image_tag transaction.nvt.photo.key %>
+        <div class="card-item-infos">
+          <h3><%= link_to transaction.nvt.category, transaction_path(transaction) %></h3>
+          <h2><%= transaction.nvt.title %></h2>
+          <p><%= transaction.nvt.price %><strong>$NVC</strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <br>
+  <br>
+  <br>
+
+  <h2 class="text-center mt-5">My NVTs</h2>
+  <div class="cards">
+    <% @nvts.each do |nvt| %>
+      <div class="card-item">
+        <%= cl_image_tag nvt.photo.key %>
+        <div class="card-item-infos">
+          <h3><%= link_to nvt.category, nvt_path(nvt) %></h3>
+          <h2><%= nvt.title %> </h2>
+          <p><%= nvt.price %><strong>$NVC</strong></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
 
 </div>
 
