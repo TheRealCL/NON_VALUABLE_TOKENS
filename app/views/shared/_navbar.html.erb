@@ -1,11 +1,11 @@
 <div class="navbar navbar-expand-md fixed-top navbar-lewagon">
-  <div class="container-fluid">
+  <div class="container-fluid" id="navbar-container-fluid">
     <div class="navbar-logo">
       <%= link_to "#", class: "navbar-brand" do %>
         <%= image_tag "logo.png" %>
       <% end %>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
+      <button class="navbar-toggler" id="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" id="navbar-toggler-icon"></span>
       </button>
     </div>
 
@@ -16,10 +16,8 @@
 
     <div id="navbar-index">
       <ul class="nav navbar-nav">
-        <%# <li><%= link_to 'Explore', nvts_path(@nvts) %></li>
         <li><%= link_to 'Explore', nvts_path %></li>
         <li><%= link_to 'Create content', new_nvt_path(@nvt) %></li>
-        <%# <li><%= link_to 'Sell content', new_nvt_path(@nvt) %></li>
         <li><%= link_to 'My collection', profile_path %></li>
       </ul>
     </div>
@@ -28,7 +26,6 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item active">
-          <%# <i class="fa-light fa-circle-user"></i> --->  Would be nice to change "login" to this icon! %>
             <%= link_to "Home", root_path, class: "nav-link" %>
           </li>
           <li class="nav-item dropdown">
