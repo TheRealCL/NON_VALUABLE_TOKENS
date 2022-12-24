@@ -95,3 +95,132 @@ a:hover {
   color: #8DB1CD;
   padding-right: 20px;
 }
+
+
+
+/* Media sizes */
+
+@media screen and (max-device-width: 480px) {
+  .navbar-lewagon {
+    justify-content: space-between;
+    background: #111927;
+    color: #8DB1CD;
+    font-family: sans-serif inherit;
+    width: 100%;
+    margin-top: 0%;
+  }
+
+  .navbar-lewagon .navbar-collapse {
+    flex-grow: 0;
+  }
+
+  .navbar-lewagon .navbar-brand img {
+    width: 70px;
+    height: 45px;
+    margin-left: 5px;
+    transition: 0.3s;
+  }
+
+  .navbar-lewagon .navbar-brand {
+    margin-right: 2px;
+  }
+
+  .navbar-lewagon .navbar-brand img:hover {
+    transform: scale(0.9, 0.9);
+  }
+
+  .nav-link {
+    color: #8DB1CD;
+  }
+
+  #navbar-index li {
+    margin-right: 10px;
+    margin-left: 20px;
+    font-size: 15px;
+    flex-direction: row;
+    margin-top: 10px;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .navbar {
+    border-bottom: solid #1A2332;
+    z-index: 5;
+    box-shadow: 0 4px 2px  rgba(0,0,0,0.3);
+    transition: 0.3s;
+  }
+
+  .navbar:hover {
+    box-shadow: 0 4px 2px  rgba(0,0,0,0.6);
+  }
+
+  .navbar li {
+    transition: 0.3s;
+    text-decoration: none;
+  }
+
+  .navbar li:hover {
+    transform: scale(0.9, 0.9);
+  }
+
+  a {
+    text-decoration: none;
+    color: #8DB1CD;
+    font-family: sans-serif inherit;
+    transition: 0.3s;
+  }
+
+  a:hover {
+    color: #6e8aa0;
+  }
+
+  .navbar form {
+    width: 140px;
+    height: 30px;
+    display:flex;
+    flex-direction:row;
+    padding: 2px;
+    margin-left: 10px;
+  }
+
+  .navbar input {
+    background-color: #1A2332;
+    border: none;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    flex-grow:2;
+    color: #8DB1CD;
+    padding-left: 20px;
+    font-size: 15px;
+  }
+
+  .navbar button {
+    background-color: #1A2332;
+    border: none;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    color: #8DB1CD;
+    padding-right: 10px;
+    font-size: 12px;
+  }
+
+  #navbar-toggler {
+    border-radius: 50px;
+    margin-left: 0px;
+  }
+
+  #navbar-toggler-icon {
+    width: 20px;
+    height: 20px;
+  }
+
+  #navbar-container-fluid {
+    justify-content: flex-start;
+  }
+}
